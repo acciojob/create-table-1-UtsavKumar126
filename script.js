@@ -11,7 +11,7 @@ function insert_Row() {
     //const table1 = document.getElementById("sampleTable");
 
     // Insert the new row before the current row
-    document.getElementsByTagName("TABLE")[0].insertBefore(newRow, curTableRow);
+    document.getElementsByTagName("TABLE")[0].children[0].insertBefore(newRow, curTableRow);
 
     // Update the current row to be the newly inserted ro
 }
