@@ -1,14 +1,18 @@
-let curRow=3;
+
 function insert_Row() {
-    //Write your code here
-  const newRow=document.createElement("tr");
-  	
+    // Create a new row element
+	const curTableRow = document.getElementsByTagName("TR")[0];
+    const newRow = document.createElement("tr");
 
-	newRow.innerHTML=`<td>Row${curRow} cell1</td>
-        <td>Row${curRow++} cell2</td>`
-	
-  const table1=document.getElementById("sampleTable")
-  table1.appendChild(newRow);	
+    // Set the innerHTML of the new row with two cells
+    newRow.innerHTML = `<td>New cell1</td><td>New cell2</td>`;
 
-	
+    // Get a reference to the table by its ID
+    //const table1 = document.getElementById("sampleTable");
+
+    // Insert the new row before the current row
+    document.getElementsByTagName("TABLE")[0].insertBefore(newRow, curTableRow);
+
+    // Update the current row to be the newly inserted ro
 }
+
